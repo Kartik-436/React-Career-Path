@@ -4,6 +4,16 @@ import gsap from 'gsap'
 import React from 'react'
 
 const Hright = () => {
+
+    useGSAP(() => {
+        gsap.from("#wrapper-p1-hright", {
+            x: 500,
+            duration: 1,
+            ease: 'power2.inOut',
+            opacity: 0,
+        })
+    })
+
     useGSAP(() => {
         function getRandomDelay() {
             return Math.random() * 2;
@@ -182,7 +192,7 @@ const Hright = () => {
     })
 
     return (
-        <div className='w-[40%] h-[100%] relative'>
+        <div id='wrapper-p1-hright' className='w-[40%] h-[100%] relative'>
             <img 
                 id="Star" 
                 className="absolute Breathe size-[7vw] top-[62vh] left-[18%] -translate-x-[50%] -translate-y-[50%]"

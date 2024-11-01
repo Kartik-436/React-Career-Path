@@ -10,23 +10,28 @@ import Faq from './Pages/Faq';
 import Blog from './Pages/Blog';
 import SignUp from './Pages/SignUp';
 import LogIn from './Pages/LogIn';
+import CustomCursor from './components/Cursor/Cursor';
+import { CursorProvider } from './components/Cursor/CursorContext';
 
 const App = () => {
   return (
-    <div>
-      <NavBar/>
-      <Routes>
-        <Route path="/React-Career-Path/" element={<Home />} />
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/services" element={<Services />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="/faq" element={<Faq />} />
-        <Route path="/Blog" element={<Blog />} />
-        <Route path="/signUp" element={<SignUp />} />
-        <Route path="/logIn" element={<LogIn />} />
-      </Routes>
-    </div>
+    <CursorProvider>
+      <div>
+        <CustomCursor />
+        <NavBar/>
+        <Routes>
+          <Route path="/React-Career-Path/" element={<Home />} />
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/services" element={<Services />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/faq" element={<Faq />} />
+          <Route path="/Blog" element={<Blog />} />
+          <Route path="/signUp" element={<SignUp />} />
+          <Route path="/logIn" element={<LogIn />} />
+        </Routes>
+      </div>
+    </CursorProvider>
   )
 }
 

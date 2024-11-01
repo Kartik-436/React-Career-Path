@@ -1,19 +1,38 @@
 /* eslint-disable no-unused-vars */
-import React, { useRef } from 'react'
+import React, { useContext, useRef } from 'react'
 import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
 import { Link } from 'react-router-dom';
+import Magnetic from './../../Cursor/Magnetic';
+import { CursorContext } from '../../Cursor/CursorContext';
 
 
 const NavPt1 = () => {
     const StarRef = useRef(null)
     const textRef = useRef(null)
+    const Wrapper = useRef(null)
+
+    var { setHover } = useContext(CursorContext);
 
     useGSAP(()=> {
         const star = StarRef.current;
         const text = textRef.current;
-
+        
+        var NavBarTimeline = gsap.timeline()
+        var tl2 = gsap.timeline()
         var tl = gsap.timeline({ repeat: -1 });
+
+        NavBarTimeline
+            .add(tl2)
+            .add(tl);
+
+        tl2.from("#wrapper > *", {
+            y: 80,
+            duration: 1,
+            ease: 'power2.inOut',
+            stagger: 0.1,
+            opacity: 0,
+        })
 
         gsap.to(star, {
             repeat: -1,
@@ -56,12 +75,14 @@ const NavPt1 = () => {
 })
 
     return (
-        <div>
-            <a className='flex items-center justify-center gap-2' href="/">
+        <div onMouseEnter={() => setHover(true)} onMouseLeave={() => setHover(false)} >
+            <a id='wrapper' ref={Wrapper} className='flex items-center justify-center gap-2' href="/">
                 <img ref={StarRef} className='h-16' src="Star.svg" alt="" />
-                <div className='overflow-hidden'>
-                    <h1 ref={textRef} className='text-black text-[40px] font-extrabold text-nowrap'>Career Path</h1>
-                </div>
+                <Magnetic>
+                    <div className='overflow-hidden'>
+                        <h1 ref={textRef} className='text-black text-[40px] font-extrabold text-nowrap'>Career Path</h1>
+                    </div>
+                </Magnetic>
             </a>
         </div>
     )

@@ -4,7 +4,7 @@ import Hero from './Hero/Hero';
 
 const Page1 = () => {
     return (
-        <div className=''>
+        <div className='overflow-hidden'>
             <Hero/>
         </div>
     )
