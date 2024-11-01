@@ -27,11 +27,15 @@ const NavPt1 = () => {
             .add(tl);
 
         tl2.from("#wrapper > *", {
-            y: 80,
-            duration: 1,
+            y: 120,
+            duration: 1.3,
             ease: 'power2.inOut',
-            stagger: 0.1,
+            stagger: {
+                each: 0.2,
+                from: "start",
+            },
             opacity: 0,
+            delay: 0.5,
         })
 
         gsap.to(star, {
@@ -76,7 +80,7 @@ const NavPt1 = () => {
 
     return (
         <div onMouseEnter={() => setHover(true)} onMouseLeave={() => setHover(false)} >
-            <a id='wrapper' ref={Wrapper} className='flex items-center justify-center gap-2' href="/">
+            <a id='wrapper' ref={Wrapper} className='flex items-center justify-center gap-2 cursor-pointer' href="/">
                 <img ref={StarRef} className='h-16' src="Star.svg" alt="" />
                 <Magnetic>
                     <div className='overflow-hidden'>

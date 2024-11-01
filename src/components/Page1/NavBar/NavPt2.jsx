@@ -11,13 +11,13 @@ const NavPt2 = () => {
 
     useGSAP(() => {
         gsap.from("#wrapper-nav2 > *", {
-            y: 80,
-            duration: 1,
+            y: 120,
+            duration: 1.5,
             opacity: 0,
             ease: 'power2.inOut',
             stagger: {
-                from: "center",
-                each: 0.05,
+                from: "start",
+                each: 0.2,
             }
         })
     })

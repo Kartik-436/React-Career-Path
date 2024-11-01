@@ -1,24 +1,26 @@
 /* eslint-disable no-unused-vars */
-import React from 'react'
-import { Routes, Route } from 'react-router-dom'
-import Home from './Pages/Home';
-import NavBar from './components/Page1/NavBar/NavBar';
-import About from './Pages/About';
-import Services from './Pages/Services';
-import Contact from './Pages/Contact';
-import Faq from './Pages/Faq';
-import Blog from './Pages/Blog';
-import SignUp from './Pages/SignUp';
-import LogIn from './Pages/LogIn';
-import CustomCursor from './components/Cursor/Cursor';
-import { CursorProvider } from './components/Cursor/CursorContext';
+import React from "react";
+import { Routes, Route } from "react-router-dom";
+import Home from "./Pages/Home";
+import NavBar from "./components/Page1/NavBar/NavBar";
+import About from "./Pages/About";
+import Services from "./Pages/Services";
+import Contact from "./Pages/Contact";
+import Faq from "./Pages/Faq";
+import Blog from "./Pages/Blog";
+import SignUp from "./Pages/SignUp";
+import LogIn from "./Pages/LogIn";
+import CustomCursor from "./components/Cursor/Cursor";
+import { CursorProvider } from "./components/Cursor/CursorContext";
+import CustomCursorMain from './components/Cursor/CustomCursorMain';
 
 const App = () => {
   return (
     <CursorProvider>
       <div>
+        <CustomCursorMain />
         <CustomCursor />
-        <NavBar/>
+        <NavBar />
         <Routes>
           <Route path="/React-Career-Path/" element={<Home />} />
           <Route path="/" element={<Home />} />
@@ -32,7 +34,7 @@ const App = () => {
         </Routes>
       </div>
     </CursorProvider>
-  )
-}
+  );
+};
 
-export default App
+export default App;
