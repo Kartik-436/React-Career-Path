@@ -21,6 +21,15 @@ const CustomCursorMain = () => {
 
         const handleMouseMove = (event) => {
             particlesRef.current.forEach((particle, index) => {
+                const size = 20 - (index / 2);
+                particle.style.width = `${size}px`;
+                particle.style.height = `${size}px`;
+
+                if (size < 2) {
+                    particle.style.width = "2px";
+                    particle.style.height = "2px";
+                }
+
                 const delay = index * 0.003;
 
                 gsap.to(particle, {
