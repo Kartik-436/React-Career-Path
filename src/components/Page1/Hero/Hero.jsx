@@ -5,7 +5,7 @@ import Hright from './Hright';
 
 const Hero = () => {
     return (
-        <div className='flex items-center justify-evenly h-[80vh] w-screen'>
+        <div className='flex items-center justify-evenly mt-[16vh] h-[80vh] w-screen'>
             <Hleft/>
             <Hright/>
         </div>

@@ -24,4 +24,6 @@ html, body{
   background-color: #B9FF66;
   border-radius: 50%;
   pointer-events: none;
+  z-index: 1000;
+  pointer-events: none;
 }

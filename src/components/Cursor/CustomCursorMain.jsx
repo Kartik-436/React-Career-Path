@@ -15,6 +15,7 @@ const CustomCursorMain = () => {
             const particle = document.createElement('div');
             particle.classList.add('particle');
             particle.style.opacity = 0;
+            particle.style.zIndex = 50;
             particlesRef.current.push(particle);
             particleContainer.appendChild(particle);
         }

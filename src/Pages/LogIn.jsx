@@ -1,12 +1,16 @@
 /* eslint-disable no-unused-vars */
 import React from 'react'
+import BackgroundSL from './../components/SignUP/BackgroundSL';
+import FormL from './../components/LogIN/FormL';
 
-const LogIn = () => {
+
+const SignUp = () => {
     return (
-        <div>
-            <h1>Log In</h1>
+        <div className='h-screen w-screen overflow-hidden'>
+            <BackgroundSL/>
+            <FormL/>
         </div>
     )
 }
 
-export default LogIn
+export default SignUp

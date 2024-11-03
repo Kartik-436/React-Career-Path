@@ -17,18 +17,77 @@ import CustomCursorMain from './components/Cursor/CustomCursorMain';
 const App = () => {
   return (
     <CursorProvider>
-      <div>
+      <div className="overflow-hidden">
         <CustomCursorMain />
         <CustomCursor />
-        <NavBar />
+
+        {/* Routes with NavBar */}
         <Routes>
-          <Route path="/React-Career-Path/" element={<Home />} />
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/services" element={<Services />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/faq" element={<Faq />} />
-          <Route path="/Blog" element={<Blog />} />
+          <Route
+            element={
+              <>
+                <NavBar />
+                <Home />
+              </>
+            }
+            path="/React-Career-Path/"
+          />
+          <Route
+            element={
+              <>
+                <NavBar />
+                <Home />
+              </>
+            }
+            path="/"
+          />
+          <Route
+            element={
+              <>
+                <NavBar />
+                <About />
+              </>
+            }
+            path="/about"
+          />
+          <Route
+            element={
+              <>
+                <NavBar />
+                <Services />
+              </>
+            }
+            path="/services"
+          />
+          <Route
+            element={
+              <>
+                <NavBar />
+                <Contact />
+              </>
+            }
+            path="/contact"
+          />
+          <Route
+            element={
+              <>
+                <NavBar />
+                <Faq />
+              </>
+            }
+            path="/faq"
+          />
+          <Route
+            element={
+              <>
+                <NavBar />
+                <Blog />
+              </>
+            }
+            path="/blog"
+          />
+
+          {/* Routes without NavBar */}
           <Route path="/signUp" element={<SignUp />} />
           <Route path="/logIn" element={<LogIn />} />
         </Routes>

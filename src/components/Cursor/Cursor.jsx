@@ -12,7 +12,7 @@ const CustomCursor = () => {
 
         const mouseMoveHandler = (e) => {
             gsap.to(cursor, {
-                duration: 1.9,
+                duration: 1.6,
                 x: e.clientX,
                 y: e.clientY,
                 ease: "power3.out"

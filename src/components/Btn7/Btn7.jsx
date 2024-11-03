@@ -20,6 +20,7 @@ const Btn7 = (props) => {
                     borderColor: `${isHovered ? props.borderC : 'black'}`,
                     fontWeight: `${isHovered ? props.bold : '400'}`,
                     padding: props.padding ,
+                    backgroundColor: `${props.bgColor}`
                 }}
             >
                 {props.name}
@@ -36,6 +37,7 @@ Btn7.propTypes = {
     bold: PropTypes.string,
     padding: PropTypes.string,
     routeTo: PropTypes.string,
+    bgColor: PropTypes.string,
 };
 
 export default Btn7

@@ -23,7 +23,7 @@ const Btn2 = (props) => {
                 onMouseMove={handleMouseMove} 
                 ref={btnRef} 
                 id='Btn2' 
-                href="#">
+                href="/">
                 <span className='text-black'>{`${props.name}`}</span>
             </a>
         </div>

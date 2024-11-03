@@ -29,7 +29,7 @@ const Hleft = () => {
             <h1 className='text-black text-[65px] font-[600]'>Navigating the digital landscape for success</h1>
             <p className='text-black font-medium text-xl'>Unlock Your True Potential, Personalized Career Guidance Tailored to Your Unique Personality.
             </p>
-            <Link to={"/signUp"}>
+            <a href={"/signUp"}>
                 <button
                     onMouseEnter={() => {setIsHovered(true); setHover(true)} }
                     onMouseLeave={() => {setIsHovered(false); setHover(false)} }
@@ -41,7 +41,7 @@ const Hleft = () => {
                     className='py-5 px-14 mt-3 text-[whitesmoke] rounded-2xl text-2xl bg-neutral-950 h-fit w-fit active:scale-90'
                 > Take Test Free 
                 </button>
-            </Link>
+            </a>
         </div>
     )
 }

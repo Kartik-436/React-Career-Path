@@ -3,7 +3,7 @@ import React from 'react'
 
 const Blog = () => {
     return (
-        <div>
+        <div className='mt-[16vh]'>
             <h1>Blog</h1>
         </div>
     )

@@ -3,7 +3,7 @@ import React from 'react'
 
 const Faq = () => {
     return (
-        <div>
+        <div className='mt-[16vh]'>
             <h1>Frequently Asked Questions</h1>
         </div>
     )

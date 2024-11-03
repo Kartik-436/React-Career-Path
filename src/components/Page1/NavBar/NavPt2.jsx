@@ -29,7 +29,7 @@ const NavPt2 = () => {
             <Btn7 routeTo="contact" name="Contact Us"/>
             <Btn7 routeTo="faq" name="FAQ"/>
             <Btn7 routeTo="blog" name="Blog"/>
-            <div onMouseEnter={() => setHover(true)} onMouseLeave={() => setHover(false)}> <Btn7 routeTo="signUp" padding='18px 35px' bold="800" border='1px solid' borderC='#8cff00' shadow='0 0 25px 7px #B9FF66' name="Take Test Free"/> </div>
+            <div onClick={() => (window.location.href = "/signUp")} onMouseEnter={() => setHover(true)} onMouseLeave={() => setHover(false)}> <Btn7 routeTo="signUp" padding='18px 35px' bold="800" border='1px solid' borderC='#8cff00' shadow='0 0 25px 7px #B9FF66' name="Take Test Free"/> </div>
         </div>
     )
 }
