@@ -53,7 +53,7 @@ const FormL = () => {
                     <div 
                         onClick={() => (window.location.href = "/")}
                     >
-                        <Btn7 routeTo="/" bgColor="white" name='Sign Up' padding='18px 60px' bold="800" border='1px solid' shadow='0 0 25px 7px black'/>
+                        <Btn7 routeTo="/" bgColor="white" name='Log In' padding='18px 60px' bold="800" border='1px solid' shadow='0 0 25px 7px black'/>
                     </div>
                     <p>Don't have an account? <a className='cursor-pointer text-pretty text-[#B9FF66] font-bold text-xl' href='/signUp'>SignUp</a></p>
                 </div>
