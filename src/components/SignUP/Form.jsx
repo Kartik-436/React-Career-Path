@@ -65,8 +65,8 @@ const Form = () => {
 
             </form>
 
-            <img className='HandImage h-[40vh] w-[20vw] absolute top-[40vh] left-[43vh] -rotate-90 select-none pointer-events-none' src="https://png.pngtree.com/png-vector/20230925/ourmid/pngtree-hand-holding-card-one-png-image_10113067.png" alt="" />
-            <img className='HandImage h-[40vh] w-[20vw] absolute top-[39vh] right-[43vh] rotate-90 select-none pointer-events-none' src="https://png.pngtree.com/png-vector/20230925/ourmid/pngtree-hand-holding-card-one-png-image_10113067.png" alt="" />
+            {/* <img className='HandImage h-[40vh] w-[20vw] absolute top-[40vh] left-[43vh] -rotate-90 select-none pointer-events-none' src="https://png.pngtree.com/png-vector/20230925/ourmid/pngtree-hand-holding-card-one-png-image_10113067.png" alt="" />
+            <img className='HandImage h-[40vh] w-[20vw] absolute top-[39vh] right-[43vh] rotate-90 select-none pointer-events-none' src="https://png.pngtree.com/png-vector/20230925/ourmid/pngtree-hand-holding-card-one-png-image_10113067.png" alt="" /> */}
         </div>
     )
 }
